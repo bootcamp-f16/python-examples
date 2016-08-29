@@ -2,9 +2,7 @@
 husker_rankings = [27, 24, 18, 16, 10, 6, 4, 1]
 final_rankings = []
 
-print "+++++++++++"
-print "example one" 
-print "+++++++++++"
+print "husker rankings: ", husker_rankings
 
 """
 reversed()
@@ -12,6 +10,10 @@ a. reversed takes a sequence and returns the elements in reverse order
 b. it requires the sequence to be something that can be iterated over: strings, lists, unicode and tuples
 c. this does Not create a new list but does allow you to iterate over reversed list
 """
+
+print "+++++++++++"
+print "example one: reversed" 
+print "+++++++++++"
 
 """
 Good Example: reversed object is able to be iterated over
@@ -32,7 +34,7 @@ def reversed_example():
 reversed_example()
 
 print "+++++++++++"
-print "example two"
+print "example two: reversed"
 print "+++++++++++++"
 
 """
@@ -51,12 +53,49 @@ reversed_example2()
 """
 reverse()
 a. reverse takes a sequence and returns the elements in reverse order
-b. it requires the sequence to be something that can be iterated over: strings, lists, unicode and tuples
-c. this does Not create a new list but does allow you to iterate over reversed list
+b. this does NOT work on strings  
+c. this Does create a new list 
 """
 
-# def reverse_example():
-#     husker_rankings.reverse()
-#     print husker_rankings
+print "+++++++++++"
+print "example one: reverse" 
+print "+++++++++++"
 
-# reverse_example()
+def reverse_example():
+    husker_rankings.reverse()
+    print husker_rankings, "original list is changed"
+
+reverse_example()
+
+"""
+math.floor()
+a. The method floor() returns floor of x - the largest integer not greater than x.
+b. must impor the math module to access floor() 
+"""
+
+import math
+
+print "+++++++++++"
+print "example one: math.floor" 
+print "+++++++++++"
+
+def floor_example():
+    print("Huskers starting rank {}".format(math.floor(27.5)))
+    assert math.floor(27.9) == 27
+
+    print("Huskers mid season rank {}".format(math.floor(16.9)))
+    assert math.floor(16.9) == 16
+
+    print("Huskers end of season rank {}".format(math.floor(1.5)))
+    assert math.floor(1.5) == 1
+
+floor_example()
+
+
+
+
+
+
+
+
+
